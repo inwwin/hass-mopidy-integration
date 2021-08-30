@@ -365,6 +365,7 @@ class MopidyMediaPlayerEntity(MediaPlayerEntity):
 
     def snapshot(self):
         """Make a snapshot of Mopidy Server."""
+        self.update()
         self._snapshot = {
             "mediaposition": self._media_position,
             "muted": self._muted,
